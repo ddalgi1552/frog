@@ -9,27 +9,27 @@
 <body>
   <input id="vol" type="range" max="50" min="0" value="50">
   <button id="frogBut">PLAY!</button>
-  <audio id="frogSnd" src="./0910/케로로행진곡.mp3"></audio>
+  <audio id="frogSnd" src="./케로로행진곡.mp3"></audio>
   <button id="stopBut">Stop!</button>
   <br><br>
   <img 
   id="frog" 
-  src="./0910/아기케로로.jpg" 
+  src="./아기케로로.jpg" 
   alt="아기케로로"
   width="300">
   <script type="text/javascript">
     frog.onmouseover=function(){
-      frog.src="./0910/케로로2.jpg";}
+      frog.src="./케로로2.jpg";}
     frog.onmouseout=function(){
-      frog.src="./0910/아기케로로.jpg";}
+      frog.src="./아기케로로.jpg";}
 
 //이미지제어
 
       var state=false;
         frog.onclick=function(){
-          if(!state){ frog.src="./0910/케로로.jpg";
+          if(!state){ frog.src="./케로로.jpg";
            state=true;
-           }else{frog.src="./0910/아기케로로.jpg"; state=false;}
+           }else{frog.src="./아기케로로.jpg"; state=false;}
         }
         var state="pause";
         frogBut.onclick=function(){
