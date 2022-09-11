@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="vol" type="range" max="50" min="0" value="50">
+  <button id="frogBut">PLAY!</button>
+  <audio id="frogSnd" src="./0910/케로로행진곡.mp3"></audio>
+  <button id="stopBut">Stop!</button>
+  <br><br>
+  <img 
+  id="frog" 
+  src="./0910/아기케로로.jpg" 
+  alt="아기케로로"
+  width="300">
+  <script type="text/javascript">
+    frog.onmouseover=function(){
+      frog.src="./0910/케로로2.jpg";}
+    frog.onmouseout=function(){
+      frog.src="./0910/아기케로로.jpg";}
+
+//이미지제어
+
+      var state=false;
+        frog.onclick=function(){
+          if(!state){ frog.src="./0910/케로로.jpg";
+           state=true;
+           }else{frog.src="./0910/아기케로로.jpg"; state=false;}
+        }
+        var state="pause";
+        frogBut.onclick=function(){
+          if(state=="pause"){
+            frogSnd.play(); state="play";
+          }
+          else{
+            frogSnd.pause(); state="pause";}
+          }
+
+        stopBut.onclick=function(){
+         frogSnd.pause();
+        }
+        vol.oninput=function(){
+            frogSnd.volume=vol.value/100;
+        }
+    
+</script>
+    
+  
+</body>
+</html>
